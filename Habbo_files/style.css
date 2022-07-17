@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu,"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: #104570;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.header {
+    height: 110px;
+    width: calc(100% - 120px);
+    padding: 0 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: white;
+}
+
+.close {
+    background-image: url(../img/close.png);
+    background-size: cover;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mainWrapper {
+    height: calc(100vh - 145px);
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    transition: 2s ease-in-out;
+    background-color: #104570;
+    z-index: 2;
+}
+
+.box {
+    width: 250px;
+    height: 350px;
+    background-color: #09547F;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 3px solid #2685BC;
+    -webkit-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.2);
+position: relative;
+}
+
+.mainWrapper .box:hover {
+    width: 350px;
+    height: 420px;
+    -webkit-box-shadow: 0px 0px 25px 14px rgba(255,255,255,0.16); 
+    box-shadow: 0px 0px 25px 14px rgba(255,255,255,0.16);
+}
+
+.divisoria {
+    position: absolute;
+    width: 250px;
+    height: 175px;
+    background-color: #0B6395;
+    border-radius: 8px 8px 0 0;
+    transition: 0.4s;
+}
+
+.mainWrapper .box:hover .divisoria {
+    width: 350px;
+    height: 210px;
+}
+
+.box h3 {
+    position: absolute;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    transition: 0.4s;
+}
+
+.mainWrapper .box:hover h3 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.box img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    width: 65%;
+}
+
+.footer {
+    color: white;
+    width: 100%;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer img {
+    height: 35px;
+}
+
+.footer p {
+    font-size: 10px;
+    text-align: center;
+    opacity: 0.35;
+}
+
+.loginWrapper {
+    height: calc(100vh - 145px);
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.loginForm {
+    width: 50%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm form {
+    z-index: 99;
+    width: 70%;
+}
+
+.loginWrapper .box {
+    -webkit-box-shadow: 0px 0px 25px 14px rgba(255,255,255,0.16); 
+    box-shadow: 0px 0px 25px 14px rgba(255,255,255,0.16);
+    cursor: auto;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    height: 50px;
+    border: 3px solid #275D8E;
+    border-radius: 4px;
+    padding: 0 15px;
+    -webkit-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.2);
+    background-color: #CCD8DF;
+}
+
+input:focus {
+    border: 3px solid #0074A6;
+    background-color: white;
+}
+
+button[type='submit'] {
+    padding: 10px 15px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #0F7DBC;
+    border: 3px solid #2A9CDE;
+    color: white;
+    border-radius: 5px;
+    font-weight: 400;
+    -webkit-box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.3); 
+box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.3);
+position: absolute;
+left: 50%;
+transform: translateX(100%);
+    cursor: pointer;
+}
+
+button[type='submit']:hover {
+    background-color: #2A9CDE;
+    border: 3px solid #53BDF9;
+}
+
+form a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: calc(100% - 100px);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px){
+
+    .mainWrapper {
+        display: block;
+    }
+    .mainWrapper .box {
+        height: 100px;
+        width: 70%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30px;
+    }
+    .mainWrapper .box img {
+        width: 90px;
+        position: absolute;
+        left: 50px;
+        top: 50%;
+    }
+    .mainWrapper .box h3 {
+        position: absolute;
+        width: 70%;
+        left: 100px;
+        text-align: left;
+        font-size: 22px;
+        transform: translateX(0);
+    }
+    .mainWrapper .box:hover {
+        height: 100px;
+        width: 70%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30px;
+    }
+
+    .mainWrapper .box:hover .divisoria {
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .mainWrapper .box:hover h3 {
+        position: absolute;
+        width: 70%;
+        left: 100px;
+        text-align: left;
+        font-size: 22px;
+        transform: translateX(0);
+        margin-bottom: 20px;
+    }
+
+    .mainWrapper .box .divisoria {
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .loginWrapper {
+        display: block;
+    }
+
+    .loginWrapper .box {
+        height: 100px;
+        width: 70%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30px;
+    }
+    
+    .loginWrapper .box .divisoria {
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .loginWrapper .box img {
+        width: 90px;
+        position: absolute;
+        left: 50px;
+        top: 50%;
+    }
+    .loginWrapper .box h3 {
+        position: absolute;
+        width: 70%;
+        left: 100px;
+        text-align: left;
+        font-size: 22px;
+        transform: translateX(0);
+    }
+    .loginForm {
+        margin-left: 75%;
+        transform: translateX(-100%);
+        width: 70%;
+    }
+    .loginForm form button[type='submit'] {
+        position: relative;
+        transform: translateX(0);
+    }
+
+    input {
+        width: calc(100% + 75px);
+    }
+}
